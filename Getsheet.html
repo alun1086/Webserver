@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form form id="myForm" action="https://script.google.com/macros/s/AKfycbzhx0nEAyEjKDeiRdsUK3y-2vLykuCeGX4-5-hnqDf83NsUnxjm/exec">
+  <input type="hidden" name="row" id="R"/><br>
+  <input type="hidden" name="col" id="C"/><br>
+</form>
+
+<script>
+
+	var rr = "";
+	var cc = "";
+
+	function formSubmit(){
+		document.getElementById("myForm").submit()
+	}
+	function set(r ,c){
+		document.getElementById("R").value = r;
+		document.getElementById("C").value = c;
+	}
+	function doGet(e) {
+		rrr = e.parameter.rr;
+		ccc = e.parameter.cc;
+		
+		document.write(rrr);
+		document.write(ccc);
+		
+		set(rrr,ccc);
+		formSubmit();
+	}
+	
+	
+</script>
+
+</body>
+</html>
